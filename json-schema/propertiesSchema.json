@@ -1,0 +1,51 @@
+{
+  "$id": "root",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "url": {
+      "type": "string",
+      "default": "https://dev101374.service-now.com/login",
+      "examples": [
+        "https://dev101374.service-now.com/login"
+      ]
+    },
+    "auth": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string",
+          "default": "admin",
+          "examples": [
+            "admin"
+          ]
+        },
+        "password": {
+          "type": "string",
+          "default": "HwqUU2M7vDuu",
+          "examples": [
+            "HwqUU2M7vDuu"
+          ]
+        }
+      },
+      "required": [
+        "username",
+        "password"
+      ],
+      "additionalProperties": false
+    },
+    "serviceNowTable": {
+      "type": "string",
+      "default": "change_request",
+      "examples": [
+        "change_request"
+      ]
+    }
+  },
+  "required": [
+    "url",
+    "auth",
+    "serviceNowTable"
+  ],
+  "additionalProperties": false
+}
